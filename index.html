@@ -941,58 +941,6 @@
         <h5>Express</h5>
         <div class="sub-head">
           <div class="sub-head-text">
-            <span>Routing: Defining our first endpoint</span>
-          </div>
-        </div>
-        <div class="child-slide-body">
-          <ul class="child-slide-body-list">
-            <li>
-              <div class="list-item-container">
-                +<span class="reading-indicator">REFERENCE:</span> <a href="https://expressjs.com/en/guide/routing.html" target="_blank">Express docs: Routing</a>
-              </div>
-            </li>
-            <li>
-              <div class="list-item-container">
-                +<span>Routing refers to how our app's endpoints responds to client requests</span>
-              </div>
-            </li>
-            <li>
-              <div class="list-item-container">
-                +<span>These are the building blocks of APIs, as we'll see on Thursday</span>
-              </div>
-            </li>
-            <li>
-              <div class="list-item-container">
-                +<span>Our routes can be written to handle different kinds of requests</span>
-              </div>
-            </li>
-            <li>
-              <div class="list-item-container">
-                +<span>Our first endpoint handles when someone tries to make a <code>GET</code> request to our app</span>
-              </div>
-            </li>
-            <li>
-              <div class="list-item-container">
-                <pre>
-                  <code data-trim data-noescape>
-                    /* define a route */
-                    app.get('/', function(req, res) {
-                      /* send a static file */
-                      res.sendFile(__dirname + '/index.html');
-                    });
-                  </code>
-                </pre>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <!-- ------------- -->
-      <section class="child-slide">
-        <h5>Express</h5>
-        <div class="sub-head">
-          <div class="sub-head-text">
             <span>Serving static files</span>
           </div>
         </div>
