@@ -687,7 +687,46 @@
           </ul>
         </div>
       </section>
-    
+
+      <!-- ------------- -->
+      <section class="child-slide">
+        <h5>Express</h5>
+        <div class="sub-head">
+          <div class="sub-head-text">
+            <span>Creating our web server</span>
+          </div>
+        </div>
+        <div class="child-slide-body">
+          <ul class="child-slide-body-list">
+            <li>
+              <div class="list-item-container">
+                +<span>We define a port number for our app to listen for connections</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>When we call <code>app.listen()</code> we pass in the port # & a callback function</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                <pre>
+                  <code data-trim data-noescape>
+                    const express = require('express');
+                    const app     = express();
+                    const PORT    = 3000;
+                    
+                    app.listen(PORT, function() {
+                      console.log('listening on PORT: ' + PORT);
+                    });
+                  </code>
+                </pre>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+  
       <!-- END SLIDES -->
     </div>
   </div>
