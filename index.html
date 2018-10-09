@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  
+  <title>Week 5: Node, Day 1</title>
+  
+  <link rel="stylesheet" href="css/reveal.css">
+  <link rel="stylesheet" href="css/theme/black.css">
+  <link rel="stylesheet" href="lib/css/zenburn.css">
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+
+<body>
+  <div class="reveal">
+    <div class="slides">
+      
+      <!-- ------------- -->
+      <section class="title-slide">
+        <h3 class="title-text">NODE</h3>
+        <div class="sub-head">
+          <div class="sub-head-text"><span>10.9.18 - Day 1</span></div>
+        </div>
+      </section>
+      
+      <!-- ------------- -->
+      <section class="child-slide">
+        <h5>Agenda</h5>
+        <div class="sub-head">
+          <div class="sub-head-text">
+            <span>what we're doing today:</span>
+          </div>
+        </div>
+        <div class="child-slide-body">
+          <ul class="child-slide-body-list">
+            <li>
+              <div class="list-item-container">
+                +<span>Why Node?</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>Setup & Installation</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>What is Node?</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>Intro to Node: Built-In Modules</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>What is NPM?</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>Express: Creating & Running a Web Server</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>FS: Reading files</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      
+      <!-- ------------- -->
+      <section class="child-slide">
+        <h5>Why Node?</h5>
+        <div class="sub-head">
+          <div class="sub-head-text">
+            <span>Why should we learn it?</span>
+          </div>
+        </div>
+        <div class="child-slide-body">
+          <ul class="child-slide-body-list">
+            <li>
+              <div class="list-item-container">
+                +<span>It opens up a lot of opportunities for us, not only on the web</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>We'll focus on interacting with APIs this week</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>But you can use it for physical computing, OSC, socket communication</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>Node is really powerful & very widely used</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ------------- -->
+      <section class="child-slide">
+        <h5>Setup & Installation</h5>
+        <div class="sub-head">
+          <div class="sub-head-text">
+            <span>XCode Command Line Tools</span>
+          </div>
+        </div>
+        <div class="child-slide-body">
+          <ul class="child-slide-body-list">
+            <li>
+              <div class="list-item-container">
+                +<span>Open up your terminal and run the following:</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                <pre>
+                  <code data-trim data-noescape>
+                    xcode-select --install
+                  </code>
+                </pre>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ------------- -->
+      <section class="child-slide">
+        <h5>Setup & Installation</h5>
+        <div class="sub-head">
+          <div class="sub-head-text">
+            <span>Homebrew</span>
+          </div>
+        </div>
+        <div class="child-slide-body">
+          <ul class="child-slide-body-list">
+            <li>
+              <div class="list-item-container">
+                +<span>We'll use Homebrew, a package manager for MacOS</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>We'll use Homebrew to install Node & NPM</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>Go <a href="https://brew.sh/" target="_blank">here</a> and run the ruby command in your terminal</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      
+      <!-- ------------- -->
+      <section class="child-slide">
+        <h5>Setup & Installation</h5>
+        <div class="sub-head">
+          <div class="sub-head-text">
+            <span>Node & NPM</span>
+          </div>
+        </div>
+        <div class="child-slide-body">
+          <ul class="child-slide-body-list">
+            <li>
+              <div class="list-item-container">
+                +<span>In your terminal run the following command:</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                <pre>
+                  <code data-trim data-noescape>
+                    brew install node
+                  </code>
+                </pre>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ------------- -->
+      <section class="child-slide">
+        <h5>Setup & Installation</h5>
+        <div class="sub-head">
+          <div class="sub-head-text">
+            <span>Node & NPM</span>
+          </div>
+        </div>
+        <div class="child-slide-body">
+          <ul class="child-slide-body-list">
+            <li>
+              <div class="list-item-container">
+                +<span>Double check your Node & NPM versions:</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                <pre>
+                  <code data-trim data-noescape>
+                    node -v
+                    # v10.11.0
+
+                    npm -v
+                    # 6.4.1
+                  </code>
+                </pre>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ------------- -->
+      <section class="child-slide">
+        <h5>CODE</h5>
+        <div class="sub-head">
+          <div class="sub-head-text">
+            <span>Clone the repo <a href="">here</a></span>
+          </div>
+        </div>
+        <div class="child-slide-body">
+        </div>
+      </section>
+
+      <!-- ------------- -->
+      <section class="child-slide">
+        <h5>NODE</h5>
+        <div class="sub-head">
+          <div class="sub-head-text">
+            <span>What is it?</span>
+          </div>
+        </div>
+        <div class="child-slide-body">
+          <ul class="child-slide-body-list">
+            <li>
+              <div class="list-item-container">
+                +<span>Node is a JS Runtime built with Chrome's V8 Javascript Engine</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>V8 compiles js code to machine code, making it really fast</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>So far we've been running javascript in the browser</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>With Node, we can use JS to run on our machines as standalone apps</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>We will use Node to run server-side javascript</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ------------- -->
+      <section class="child-slide">
+        <h5>Node</h5>
+        <div class="sub-head">
+          <div class="sub-head-text">
+            <span>How to use it: REPL</span>
+          </div>
+        </div>
+        <div class="child-slide-body">
+          <ul class="child-slide-body-list">
+            <li>
+              <div class="list-item-container">
+                +<span>Similar to the console in Chrome's dev tools</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>Node gives you the same thing: type <code>node</code> and enter in your terminal</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                <img class="child-slide-img" src="https://i1.wp.com/education.codexplorer.io/wp-content/uploads/2017/12/node-repl.png?fit=725%2C430" width="600" height="auto">
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ------------- -->
+      <section class="child-slide">
+        <h5>Node</h5>
+        <div class="sub-head">
+          <div class="sub-head-text">
+            <span><code>hello-node/01-app.js</code></span>
+          </div>
+        </div>
+        <div class="child-slide-body">
+          <ul class="child-slide-body-list">
+            <li>
+              <div class="list-item-container">
+                +<span><code>cd hello-node</code></span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>We can run this with: <code>node 01-app.js</code></span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                <pre>
+                  <code data-trim data-noescape>
+                    function calcSum(x, y) {
+                      return x + y;
+                    }
+                      
+                    console.log('calcSum(2 + 4) = ' + calcSum(2, 4));
+                  </code>
+                </pre>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ------------- -->
+      <section class="child-slide">
+        <h5>Node</h5>
+        <div class="sub-head">
+          <div class="sub-head-text">
+            <span><code>hello-node/02-process.js</code></span>
+          </div>
+        </div>
+        <div class="child-slide-body">
+          <ul class="child-slide-body-list">
+            <li>
+              <div class="list-item-container">
+                +<span class="reading-indicator">REFERENCE:</span> <a href="https://nodejs.org/api/process.html" target="_blank">Node Docs: <code>process</code></a>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>the <code>process</code> object is global</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                <pre>
+                  <code data-trim data-noescape>
+                    console.log("current working directory: " + process.cwd());
+                    console.log("running on platform: " + process.platform);
+                    console.log("running on architecture: " + process.arch);
+                  </code>
+                </pre>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ------------- -->
+      <section class="child-slide">
+        <h5>Node</h5>
+        <div class="sub-head">
+          <div class="sub-head-text">
+            <span><code>hello-node/03-child-process.js</code></span>
+          </div>
+        </div>
+        <div class="child-slide-body">
+          <ul class="child-slide-body-list">
+            <li>
+              <div class="list-item-container">
+                +<span class="reading-indicator">REFERENCE:</span> <a href="https://nodejs.org/api/child_process.html" target="_blank">Node Docs: <code>child_process</code></a>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span><code>child_process</code> is a built-in Node module</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>lets us access OS functionalities</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>e.g., we can run commands we call in terminal</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                <pre>
+                  <code data-trim data-noescape>
+                    const exec = require('child_process').exec;
+
+                    function say(msg, name) {
+                      exec('say ' + msg + ' ' + name);
+                    }
+                    
+                    say('Hello nice to meet you', 'Rachel');
+                  </code>
+                </pre>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ------------- -->
+      <section class="child-slide">
+        <h5>Node</h5>
+        <div class="sub-head">
+          <div class="sub-head-text">
+            <span>Exercise: Create an empty Node app</span>
+          </div>
+        </div>
+        <div class="child-slide-body">
+          <ul class="child-slide-body-list">
+            <li>
+              <div class="list-item-container">
+                +<span>(this is the web-server exercise in today's cold folder)</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>Create a new folder called node-starter</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>cd into your folder</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>Run <code>npm init</code></span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+  
+      <!-- ------------- -->
+      <section class="child-slide">
+        <h5>Node</h5>
+        <div class="sub-head">
+          <div class="sub-head-text">
+            <span>What's package.json?</span>
+          </div>
+        </div>
+        <div class="child-slide-body">
+          <ul class="child-slide-body-list">
+            <li>
+              <div class="list-item-container">
+                +<span>We'll talk about JSON in more detail later</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>JSON = <b>J</b>ava<b>S</b>cript <b>O</b>bject <b>N</b>otation</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+  
+      <!-- ------------- -->
+      <section class="child-slide">
+        <h5>Node</h5>
+        <div class="sub-head">
+          <div class="sub-head-text">
+            <span>What's package.json?</span>
+          </div>
+        </div>
+        <div class="child-slide-body">
+          <ul class="child-slide-body-list">
+            <li>
+              <div class="list-item-container">
+                +<span><code>package.json</code> holds metadata about our Node app</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span><code>main</code> refers to the entry point of our app (typically called index.js, app.js)</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span><code>scripts</code> are commands we can run with npm (more on this soon)</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>when we start using external packages (dependencies), this file gets updated</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ------------- -->
+      <section class="child-slide">
+        <h5>NPM</h5>
+        <div class="sub-head">
+          <div class="sub-head-text">
+            <span>What is it?</span>
+          </div>
+        </div>
+        <div class="child-slide-body">
+          <ul class="child-slide-body-list">
+            <li>
+              <div class="list-item-container">
+                +<span><b>N</b>ode <b>P</b>ackage <b>M</b>anager</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>Similar to the way you installed a local server package for your IDE</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>We use NPM to install packages (code modules) to use in our JS</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ------------- -->
+      <section class="child-slide">
+        <h5>NPM</h5>
+        <div class="sub-head">
+          <div class="sub-head-text">
+            <span>Express Web Framework</span>
+          </div>
+        </div>
+        <div class="child-slide-body">
+          <ul class="child-slide-body-list">
+            <li>
+              <div class="list-item-container">
+                +<span class="reading-indicator">REFERENCE:</span> <a href="https://expressjs.com/" target="_blank">ExpressJS</a>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>We'll create a web server using Express</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>Install the express package with the following command:</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                <pre>
+                  <code data-trim data-noescape>
+                    npm install express --save
+                  </code>
+                </pre>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ------------- -->
+      <section class="child-slide">
+        <h5>NPM</h5>
+        <div class="sub-head">
+          <div class="sub-head-text">
+            <span>Look at package.json</span>
+          </div>
+        </div>
+        <div class="child-slide-body">
+          <ul class="child-slide-body-list">
+            <li>
+              <div class="list-item-container">
+                +<span>a new property has been added to <code>package.json</code> called <code>dependencies</code></span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                <img class="child-slide-img" src=
+                "https://cdn-images-1.medium.com/max/1600/1*oYOG-ADvDTvFyWpfuWfgCw.png" width="600" height="auto">
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ------------- -->
+      <section class="child-slide">
+        <h5>NPM</h5>
+        <div class="sub-head">
+          <div class="sub-head-text">
+            <span>Look at package.json</span>
+          </div>
+        </div>
+        <div class="child-slide-body">
+          <ul class="child-slide-body-list">
+            <li>
+              <div class="list-item-container">
+                +<span class="reading-indicator">REFERENCE:</span> <a href="https://medium.com/@stalonadsl948/dependencies-vs-devdependencies-926e096a3dee" target="_blank">Dependencies</a>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>When working with other people's code, always check the README first</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>If it's using Node, you'll likely need to run <code>npm install</code></span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>This tells npm to look at package.json and install required dependencies</code></span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ------------- -->
+      <section class="child-slide">
+        <h5>Express</h5>
+        <div class="sub-head">
+          <div class="sub-head-text">
+            <span>Creating our web server</span>
+          </div>
+        </div>
+        <div class="child-slide-body">
+          <ul class="child-slide-body-list">
+            <li>
+              <div class="list-item-container">
+                +<span>In the first line, we use the <code>require</code> keyword to essentially import the express module</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>We assign it to a <code>const</code> variable called <code>express</code> - it's an alias, can be anything</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>In the second line we create an instance of an express application</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span class="reading-indicator">REFERENCE:</span> <a href="https://expressjs.com/en/4x/api.html" target="_blank">express()</a>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                <pre>
+                  <code data-trim data-noescape>
+                    const express = require('express');
+                    const app     = express();
+                  </code>
+                </pre>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+    
+      <!-- END SLIDES -->
+    </div>
+  </div>
+</body>
+
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.js"></script>
+<script>
+  // ---------------------------------------------
+  init();
+  
+  // ---------------------------------------------
+  function init() {
+    Reveal.initialize({
+      dependencies: [
+      { 
+        src: 'plugin/highlight/highlight.js', 
+        async: true, 
+        callback: function() { hljs.initHighlightingOnLoad(); } 
+      }
+      ]
+    });
+    
+    Reveal.configure({
+      slideNumber: true,
+      slideNumber: 'c/t'
+    });
+    
+  }
+</script>
+
+</html>
