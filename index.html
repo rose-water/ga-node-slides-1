@@ -520,6 +520,30 @@
 
       <!-- ------------- -->
       <section class="child-slide">
+        <h5>Node</h5>
+        <div class="sub-head">
+          <div class="sub-head-text">
+            <span>Creating our entry point: <code>index.js</code></span>
+          </div>
+        </div>
+        <div class="child-slide-body">
+          <ul class="child-slide-body-list">
+            <li>
+              <div class="list-item-container">
+                +<span>Inside your folder, create a new file called <code>index.js</code></span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>This is where we'll write code for our web server</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ------------- -->
+      <section class="child-slide">
         <h5>NPM</h5>
         <div class="sub-head">
           <div class="sub-head-text">
@@ -646,17 +670,107 @@
 
       <!-- ------------- -->
       <section class="child-slide">
-        <h5>Express</h5>
+        <h5>NPM</h5>
         <div class="sub-head">
           <div class="sub-head-text">
-            <span>Creating our web server</span>
+            <span>nodemon</span>
           </div>
         </div>
         <div class="child-slide-body">
           <ul class="child-slide-body-list">
             <li>
               <div class="list-item-container">
-                +<span>In the first line, we use the <code>require</code> keyword to essentially import the express module</span>
+                +<span class="reading-indicator">REFERENCE:</span> <a href="https://nodemon.io/" target="_blank">DOCS: nodemon</a>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>Before we start writing our code let's install another package</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span><code>nodemon</code> will live reload like atom-live-server</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>it will listen for changes when you save & restart your server for you</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                <pre>
+                  <code data-trim data-noescape>
+                    # -g flag means global install
+                    npm install -g nodemon
+                  </code>
+                </pre>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ------------- -->
+      <section class="child-slide">
+        <h5>NPM</h5>
+        <div class="sub-head">
+          <div class="sub-head-text">
+            <span>nodemon - a change to package.json</span>
+          </div>
+        </div>
+        <div class="child-slide-body">
+          <ul class="child-slide-body-list">
+            <li>
+              <div class="list-item-container">
+                +<span>Add a script to your package.json (delete test)</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>Instead of calling <code>node index.js</code> we can now use <code>npm start</code></span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                <pre>
+                  <code data-trim data-noescape>
+                    {
+                      "name": "web-server",
+                      "version": "1.0.0",
+                      "description": "",
+                      "main": "index.js",
+                      "scripts": {
+                        <mark>"start": "nodemon index.js",</mark>
+                      },
+                      "author": "",
+                      "license": "ISC",
+                      "dependencies": {
+                        "express": "^4.16.3"
+                      }
+                    }
+                  </code>
+                </pre>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ------------- -->
+      <section class="child-slide">
+        <h5>Express</h5>
+        <div class="sub-head">
+          <div class="sub-head-text">
+            <span>Creating our web server - <code>index.js</code></span>
+          </div>
+        </div>
+        <div class="child-slide-body">
+          <ul class="child-slide-body-list">
+            <li>
+              <div class="list-item-container">
+                +<span>On the first line we use the <code>require</code> keyword to essentially import the express module</span>
               </div>
             </li>
             <li>
@@ -693,7 +807,7 @@
         <h5>Express</h5>
         <div class="sub-head">
           <div class="sub-head-text">
-            <span>Creating our web server</span>
+            <span>Creating our web server - <code>index.js</code></span>
           </div>
         </div>
         <div class="child-slide-body">
@@ -719,6 +833,45 @@
                     app.listen(PORT, function() {
                       console.log('listening on PORT: ' + PORT);
                     });
+                  </code>
+                </pre>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ------------- -->
+      <section class="child-slide">
+        <h5>Express</h5>
+        <div class="sub-head">
+          <div class="sub-head-text">
+            <span>Creating our web server - <code>index.js</code></span>
+          </div>
+        </div>
+        <div class="child-slide-body">
+          <ul class="child-slide-body-list">
+            <li>
+              <div class="list-item-container">
+                +<span>Run <code>npm start</code></span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>You should see something like the following in terminal:</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                <pre>
+                  <code data-trim data-noescape>
+                    &gt; nodemon index.js
+
+                    [nodemon] 1.18.4
+                    [nodemon] to restart at any time, enter `rs`                          
+                    [nodemon] watching: *.*
+                    [nodemon] starting `node index.js`
+                    listening on PORT: 3000
                   </code>
                 </pre>
               </div>
