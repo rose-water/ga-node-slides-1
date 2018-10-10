@@ -991,6 +991,66 @@
         </div>
       </section>
   
+      <!-- ------------- -->
+      <section class="child-slide">
+        <h5>Express</h5>
+        <div class="sub-head">
+          <div class="sub-head-text">
+            <span>Defining another endpoint: request query</span>
+          </div>
+        </div>
+        <div class="child-slide-body">
+          <ul class="child-slide-body-list">
+            <li>
+              <div class="list-item-container">
+                +<span>let's define another endpoint called <code>/test</code></span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>In your browser: <code>http://localhost:3000/test?species=cats</code></span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>the <code>?</code> in this url refers to the start of a 'query string'</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>A query string is made up of key-value pairs</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>This query string has one pair: key = species, value = cats</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                <pre>
+                  <code data-trim data-noescape>
+                    app.get('/test', function(req, res) {
+                      let cats = ["Scottish Fold", "Russian Blue", "Ragdoll"];
+                      let dogs = ["Golden Retriever", "German Shepherd", "Alaskan Malamute"];
+                      
+                      if (req.query.species == 'cats') {
+                        res.send(cats);
+                      } else if (req.query.species == 'dogs') {
+                        res.send(dogs);
+                      } else {
+                        res.send("Unknown Species");
+                      }
+                    });
+                  </code>
+                </pre>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+    
+
       <!-- END SLIDES -->
     </div>
   </div>
