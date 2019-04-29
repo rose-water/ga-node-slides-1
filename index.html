@@ -21,7 +21,7 @@
       <section class="title-slide">
         <h3 class="title-text">NODE</h3>
         <div class="sub-head">
-          <div class="sub-head-text"><span>10.9.18 - Day 1</span></div>
+          <div class="sub-head-text"><span>04.30.19 - Day 1</span></div>
         </div>
       </section>
       
@@ -65,11 +65,6 @@
                 +<span>Express: Creating & Running a Web Server</span>
               </div>
             </li>
-            <li>
-              <div class="list-item-container">
-                +<span>FS: Reading files</span>
-              </div>
-            </li>
           </ul>
         </div>
       </section>
@@ -86,17 +81,17 @@
           <ul class="child-slide-body-list">
             <li>
               <div class="list-item-container">
-                +<span>It opens up a lot of opportunities for us, not only on the web</span>
+                +<span>It opens up a lot of opportunities for us, including: </span>
               </div>
             </li>
             <li>
               <div class="list-item-container">
-                +<span>We'll focus on interacting with APIs this week</span>
+                +<span>Working with APIs for data visualization</span>
               </div>
             </li>
             <li>
               <div class="list-item-container">
-                +<span>But you can use it for physical computing, OSC, socket communication</span>
+                +<span>Linking physical computing and interactivity to visuals</span>
               </div>
             </li>
             <li>
@@ -195,6 +190,25 @@
 
       <!-- ------------- -->
       <section class="child-slide">
+        <h5>Setup & Installation (Windows)</h5>
+        <div class="sub-head">
+          <div class="sub-head-text">
+            <span>Node & NPM</span>
+          </div>
+        </div>
+        <div class="child-slide-body">
+          <ul class="child-slide-body-list">
+            <li>
+              <div class="list-item-container">
+                +<span>Click <a href="https://nodejs.org/en/download/" target="_blank">here</a> for the installer</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ------------- -->
+      <section class="child-slide">
         <h5>Setup & Installation</h5>
         <div class="sub-head">
           <div class="sub-head-text">
@@ -213,10 +227,10 @@
                 <pre>
                   <code data-trim data-noescape>
                     node -v
-                    # v10.11.0
+                    # v11.14.0
 
                     npm -v
-                    # 6.4.1
+                    # 6.9.0
                   </code>
                 </pre>
               </div>
@@ -281,7 +295,7 @@
         <h5>Node</h5>
         <div class="sub-head">
           <div class="sub-head-text">
-            <span>How to use it: REPL</span>
+            <span>READ–EVAL–PRINT LOOP</span>
           </div>
         </div>
         <div class="child-slide-body">
@@ -310,7 +324,7 @@
         <h5>Node</h5>
         <div class="sub-head">
           <div class="sub-head-text">
-            <span><code>hello-node/01-app.js</code></span>
+            <span>Running basic node apps</span>
           </div>
         </div>
         <div class="child-slide-body">
@@ -327,8 +341,20 @@
             </li>
             <li>
               <div class="list-item-container">
+                +<span>The <code>console</code> in Node is a module similar to console in our browsers</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span class="reading-indicator">REFERENCE:</span> <a href="https://nodejs.org/api/console.html" target="_blank">Node Docs: <code>console</code></a>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
                 <pre>
                   <code data-trim data-noescape>
+                    // hello-node/01-app.js
+
                     function calcSum(x, y) {
                       return x + y;
                     }
@@ -347,7 +373,7 @@
         <h5>Node</h5>
         <div class="sub-head">
           <div class="sub-head-text">
-            <span><code>hello-node/02-process.js</code></span>
+            <span>Running basic node apps</span>
           </div>
         </div>
         <div class="child-slide-body">
@@ -366,6 +392,8 @@
               <div class="list-item-container">
                 <pre>
                   <code data-trim data-noescape>
+                    // hello-node/02-app.js
+
                     console.log("current working directory: " + process.cwd());
                     console.log("running on platform: " + process.platform);
                     console.log("running on architecture: " + process.arch);
@@ -378,7 +406,7 @@
       </section>
 
       <!-- ------------- -->
-      <section class="child-slide">
+      <!-- <section class="child-slide">
         <h5>Node</h5>
         <div class="sub-head">
           <div class="sub-head-text">
@@ -424,7 +452,7 @@
             </li>
           </ul>
         </div>
-      </section>
+      </section> -->
 
       <!-- ------------- -->
       <section class="child-slide">
@@ -472,28 +500,14 @@
           <ul class="child-slide-body-list">
             <li>
               <div class="list-item-container">
-                +<span>We'll talk about JSON in more detail later</span>
+                +<span>JSON = <b>J</b>ava<b>S</b>cript <b>O</b>bject <b>N</b>otation</span>
               </div>
             </li>
             <li>
               <div class="list-item-container">
-                +<span>JSON = <b>J</b>ava<b>S</b>cript <b>O</b>bject <b>N</b>otation</span>
+                +<span>It is a format that stores data as key-value pairs, similar to JS objects</span>
               </div>
             </li>
-          </ul>
-        </div>
-      </section>
-  
-      <!-- ------------- -->
-      <section class="child-slide">
-        <h5>Node</h5>
-        <div class="sub-head">
-          <div class="sub-head-text">
-            <span>What's package.json?</span>
-          </div>
-        </div>
-        <div class="child-slide-body">
-          <ul class="child-slide-body-list">
             <li>
               <div class="list-item-container">
                 +<span><code>package.json</code> holds metadata about our Node app</span>
@@ -514,34 +528,16 @@
                 +<span>when we start using external packages (dependencies), this file gets updated</span>
               </div>
             </li>
-          </ul>
-        </div>
-      </section>
-
-      <!-- ------------- -->
-      <section class="child-slide">
-        <h5>Node</h5>
-        <div class="sub-head">
-          <div class="sub-head-text">
-            <span>Creating our entry point: <code>index.js</code></span>
-          </div>
-        </div>
-        <div class="child-slide-body">
-          <ul class="child-slide-body-list">
             <li>
               <div class="list-item-container">
-                +<span>Inside your folder, create a new file called <code>index.js</code></span>
-              </div>
-            </li>
-            <li>
-              <div class="list-item-container">
-                +<span>This is where we'll write code for our web server</span>
+                <img class="child-slide-img" src=
+                "https://csharpcorner-mindcrackerinc.netdna-ssl.com/UploadFile/BlogImages/02202017114315AM/2.png" width="600" height="auto">
               </div>
             </li>
           </ul>
         </div>
       </section>
-
+  
       <!-- ------------- -->
       <section class="child-slide">
         <h5>NPM</h5>
@@ -567,94 +563,17 @@
                 +<span>We use NPM to install packages (code modules) to use in our JS</span>
               </div>
             </li>
-          </ul>
-        </div>
-      </section>
-
-      <!-- ------------- -->
-      <section class="child-slide">
-        <h5>NPM</h5>
-        <div class="sub-head">
-          <div class="sub-head-text">
-            <span>Express Web Framework</span>
-          </div>
-        </div>
-        <div class="child-slide-body">
-          <ul class="child-slide-body-list">
             <li>
               <div class="list-item-container">
-                <img class="child-slide-img" src="https://cdn-images-1.medium.com/max/1600/1*y9D6b5w8rUZuruhWCXxMGA.png" width="600" height="auto">
+                +<span>Packages offer different functionalities, as we'll see once we start working with them</span>
               </div>
             </li>
           </ul>
         </div>
       </section>
 
-      <!-- ------------- -->
-      <section class="child-slide">
-        <h5>NPM</h5>
-        <div class="sub-head">
-          <div class="sub-head-text">
-            <span>Express Web Framework</span>
-          </div>
-        </div>
-        <div class="child-slide-body">
-          <ul class="child-slide-body-list">
-            <li>
-              <div class="list-item-container">
-                +<span class="reading-indicator">REFERENCE:</span> <a href="https://expressjs.com/" target="_blank">ExpressJS</a>
-              </div>
-            </li>
-            <li>
-              <div class="list-item-container">
-                +<span>We'll create a web server using Express</span>
-              </div>
-            </li>
-            <li>
-              <div class="list-item-container">
-                +<span>Install the express package with the following command:</span>
-              </div>
-            </li>
-            <li>
-              <div class="list-item-container">
-                <pre>
-                  <code data-trim data-noescape>
-                    npm install express --save
-                  </code>
-                </pre>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <!-- ------------- -->
-      <section class="child-slide">
-        <h5>NPM</h5>
-        <div class="sub-head">
-          <div class="sub-head-text">
-            <span>Look at package.json</span>
-          </div>
-        </div>
-        <div class="child-slide-body">
-          <ul class="child-slide-body-list">
-            <li>
-              <div class="list-item-container">
-                +<span>a new property has been added to <code>package.json</code> called <code>dependencies</code></span>
-              </div>
-            </li>
-            <li>
-              <div class="list-item-container">
-                <img class="child-slide-img" src=
-                "https://cdn-images-1.medium.com/max/1600/1*oYOG-ADvDTvFyWpfuWfgCw.png" width="600" height="auto">
-              </div>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <!-- ------------- -->
-      <section class="child-slide">
+       <!-- ------------- -->
+       <section class="child-slide">
         <h5>NPM</h5>
         <div class="sub-head">
           <div class="sub-head-text">
@@ -730,6 +649,69 @@
           </ul>
         </div>
       </section>
+  
+      <!-- ------------- -->
+      <section class="child-slide">
+        <h5>NPM</h5>
+        <div class="sub-head">
+          <div class="sub-head-text">
+            <span>Look at package.json</span>
+          </div>
+        </div>
+        <div class="child-slide-body">
+          <ul class="child-slide-body-list">
+            <li>
+              <div class="list-item-container">
+                +<span>a new property has been added to <code>package.json</code> called <code>dependencies</code></span>
+              </div>
+            </li>
+            
+          </ul>
+        </div>
+      </section>
+
+      <!-- ------------- -->
+      <section class="child-slide">
+        <h5>Running a web server with Node</h5>
+        <div class="sub-head">
+          <div class="sub-head-text">
+            <span></span>
+          </div>
+        </div>
+        <div class="child-slide-body">
+          <ul class="child-slide-body-list">
+            <li>
+              <div class="list-item-container">
+                <img class="child-slide-img" src="https://cdn-images-1.medium.com/max/1600/1*y9D6b5w8rUZuruhWCXxMGA.png" width="600" height="auto">
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ------------- -->
+      <section class="child-slide">
+        <h5>Running a web server with Node</h5>
+        <div class="sub-head">
+          <div class="sub-head-text">
+            <span>Creating our entry point: <code>index.js</code></span>
+          </div>
+        </div>
+        <div class="child-slide-body">
+          <ul class="child-slide-body-list">
+            <li>
+              <div class="list-item-container">
+                +<span>Inside your folder, create a new file called <code>index.js</code></span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>This is where we'll write code for our web server</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
 
       <!-- ------------- -->
       <section class="child-slide">
@@ -779,6 +761,49 @@
 
       <!-- ------------- -->
       <section class="child-slide">
+        <h5>NPM</h5>
+        <div class="sub-head">
+          <div class="sub-head-text">
+            <span>Express Web Framework</span>
+          </div>
+        </div>
+        <div class="child-slide-body">
+          <ul class="child-slide-body-list">
+            <li>
+              <div class="list-item-container">
+                +<span class="reading-indicator">REFERENCE:</span> <a href="https://expressjs.com/" target="_blank">ExpressJS</a>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>We'll create a web server using Express</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>Express is built on top of Node's <code>http</code> module</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>Install the express package with the following command:</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                <pre>
+                  <code data-trim data-noescape>
+                    npm install express --save
+                  </code>
+                </pre>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ------------- -->
+      <section class="child-slide">
         <h5>Express</h5>
         <div class="sub-head">
           <div class="sub-head-text">
@@ -789,7 +814,7 @@
           <ul class="child-slide-body-list">
             <li>
               <div class="list-item-container">
-                +<span>On the first line we use the <code>require</code> keyword to essentially import the express module</span>
+                +<span>On the first line we use the <code>require</code> keyword to import the express module</span>
               </div>
             </li>
             <li>
@@ -921,7 +946,7 @@
             </li>
             <li>
               <div class="list-item-container">
-                +<span>These are the building blocks of APIs, as we'll see on Thursday</span>
+                +<span>These are the building blocks of APIs</span>
               </div>
             </li>
             <li>
@@ -1069,7 +1094,6 @@
         </div>
       </section>
     
-
       <!-- END SLIDES -->
     </div>
   </div>
