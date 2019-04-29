@@ -926,6 +926,104 @@
 
       <!-- ------------- -->
       <section class="child-slide">
+        <h5>Intro to HTTP</h5>
+        <div class="sub-head">
+          <div class="sub-head-text">
+            <span><b>H</b>yper<b>T</b>ext <b>T</b>ransfer <b>P</b>rotocol</span>
+          </div>
+        </div>
+        <div class="child-slide-body">
+          <ul class="child-slide-body-list">
+            <li>
+              <div class="list-item-container">
+                +<span>This is the way that clients and servers communicate with each other</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>Servers are just a bunch of machines that are running in a remote location</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ------------- -->
+      <section class="child-slide">
+        <h5>Intro to HTTP</h5>
+        <div class="sub-head">
+          <div class="sub-head-text">
+            <span>Basic Flow</span>
+          </div>
+        </div>
+        <div class="child-slide-body">
+          <ul class="child-slide-body-list">
+            <li>
+              <div class="list-item-container">
+                1.<span>A client (a browser) sends an HTTP request (e.g., get some data, update existing data)
+                  </span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                2.<span>A web server receives the request</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                3.<span>The server runs an application (in our case, Node) to process the request</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                4.<span>The server returns an HTTP response (output) to the browser (we are doing this today)</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                5.<span>The client (the browser) receives the response</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ------------- -->
+      <section class="child-slide">
+        <h5>Intro to HTTP</h5>
+        <div class="sub-head">
+          <div class="sub-head-text">
+            <span>Types of Requests</span>
+          </div>
+        </div>
+        <div class="child-slide-body">
+          <ul class="child-slide-body-list">
+            <li>
+              <div class="list-item-container">
+                +<span>There are a number of different types of http requests that you can make</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>Some of the big ones: <code>GET, PUT, POST, DELETE</code></span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>A <code>GET</code> request is for retrieving data only. No changes to data stored server side.</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>A <code>POST</code> request is for sending data to a server (e.g. form submissions)</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ------------- -->
+      <section class="child-slide">
         <h5>Express</h5>
         <div class="sub-head">
           <div class="sub-head-text">
@@ -957,11 +1055,6 @@
             <li>
               <div class="list-item-container">
                 +<span>Our first endpoint handles when someone tries to make a <code>GET</code> request to our app</span>
-              </div>
-            </li>
-            <li>
-              <div class="list-item-container">
-                +<span>We won't write our own APIs, but this is what the starting point could look like</span>
               </div>
             </li>
             <li>
@@ -1093,6 +1186,83 @@
           </ul>
         </div>
       </section>
+
+      <!-- ------------- -->
+      <section class="child-slide">
+          <h5>Connecting Node to p5 - SETUP</h5>
+          <div class="sub-head">
+            <div class="sub-head-text">
+              <span></span>
+            </div>
+          </div>
+          <div class="child-slide-body">
+            <ul class="child-slide-body-list">
+              <li>
+                <div class="list-item-container">
+                  <span>02-setup-p5</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+  
+        <!-- ------------- -->
+        <section class="child-slide">
+          <h5>Creating our first API Request</h5>
+          <div class="sub-head">
+            <div class="sub-head-text">
+              <span></span>
+            </div>
+          </div>
+          <div class="child-slide-body">
+            <ul class="child-slide-body-list">
+              <li>
+                <div class="list-item-container">
+                  <span>03-request</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+  
+        <!-- ------------- -->
+        <section class="child-slide">
+          <h5>Sending data to our frontend</h5>
+          <div class="sub-head">
+            <div class="sub-head-text">
+              <span></span>
+            </div>
+          </div>
+          <div class="child-slide-body">
+            <ul class="child-slide-body-list">
+              <li>
+                <div class="list-item-container">
+                  <span>04-send-response</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+  
+        <!-- ------------- -->
+        <section class="child-slide">
+          <h5>Doing something when we get data</h5>
+          <div class="sub-head">
+            <div class="sub-head-text">
+              <span></span>
+            </div>
+          </div>
+          <div class="child-slide-body">
+            <ul class="child-slide-body-list">
+              <li>
+                <div class="list-item-container">
+                  <span>05-sketch</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+  
     
       <!-- END SLIDES -->
     </div>
